@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig', # new
+    'accounts.apps.AccountsConfig', # new
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Después de iniciar sesión o registrarse, redirige a la página principal
+LOGIN_REDIRECT_URL = 'home'
+
+# Después de hacer logout, redirige a la página de login
+LOGOUT_REDIRECT_URL = 'login'
